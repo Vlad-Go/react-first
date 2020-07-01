@@ -1,0 +1,43 @@
+.app-info{
+  height: 500px;
+  position: relative;
+  background-image: url(../../mountains.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(57, 57, 57, .5);
+    z-index: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  &__title{
+    position: relative;
+    font-size: 40px;
+    text-align: center;
+    padding: 50px 30px 20px;
+    z-index: 2;
+  }
+}
+
+@media (max-width: 600px){
+.app-info{
+  width: 250px;
+  }
+}
+@media (max-width: 550px){
+  .app-info{
+    width: 100%;
+    &__title{
+      padding-top: 400px;
+    }
+    }
+}

@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import AppInfo from './components/AppInfo/AppInfo';
+import Main from './components/Main/Main';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+// const API_KEY = '3bf2682057a1e3b0c70cc87c808409a5';
+//
+// const getWeather =  () => {
+//
+//     fetch(`http://api.openweathermap.org/data/2.5/weather?q=London&APPID=${API_KEY}`)
+//     .then(response =>  response.json())
+//     .then(data =>  console.log(data))
+//
+//    // this.setState({
+//    //   temp: '13',
+//    //   sunset: '13:00'
+//    // })
+//
+// }
+// getWeather()
+
+const App = () =>(
+    <div className="app">
+         <AppInfo/>
+         <Main/>
     </div>
   );
-}
 
 export default App;
