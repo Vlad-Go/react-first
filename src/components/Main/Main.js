@@ -2,39 +2,10 @@ import React from 'react';
 
 import Form from '../Form/Form';
 import DataList from '../DataList/DataList';
-
-
 import './Main.scss';
 
 
 const API_KEY= '3bf2682057a1e3b0c70cc87c808409a5';
-
-// const getWeather = async (e) => {
-//   // e.preventDefault();
-//
-//     fetch(`http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&APPID=${API_KEY}`)
-//     .then(response =>  response.json())
-//     .then(data =>{
-//         this.setState({
-//         weather: data.weather.main,
-//         weatherDescription:  data.weather.description,
-//         temp: data.main.temp,
-//         pressure: data.main.pressure,
-//         sunrise: data.sys.sunrise,
-//         sunset: data.sys.sunset,
-//       });
-//   } )
-//
-// }
-// getWeather()
-
-
-
-
-
-
-
-
 class  Main extends React.Component{
   state = {
     weather: undefined,
@@ -49,11 +20,10 @@ class  Main extends React.Component{
   getWeather(e)  {
     e.preventDefault();
     const city = e.target.elements.city.value;
-
-
+    let url= `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${API_KEY}`
      if (city) {
           console.log(city);
-          fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=${API_KEY}`)
+          fetch(url)
           .then(response =>  response.json())
           .then(data =>{
             const date_sunrise = new Date();

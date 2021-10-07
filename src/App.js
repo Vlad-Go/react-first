@@ -9,7 +9,7 @@ import './App.css';
 //
 // const getWeather =  () => {
 //
-//     fetch(`http://api.openweathermap.org/data/2.5/weather?q=London&APPID=${API_KEY}`)
+//     fetch(`https://api.openweathermap.org/data/2.5/weather?q=London&APPID=${API_KEY}`)
 //     .then(response =>  response.json())
 //     .then(data =>  console.log(data))
 //
